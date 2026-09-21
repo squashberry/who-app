@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="WHO — a beta communication intelligence app by Squashberry. Caller ID, dialer, SMS, contacts and privacy-first communication tools.">
+  <meta property="og:title" content="WHO — Know who's calling.">
+  <meta property="og:description" content="WHO is building a calmer, smarter phone experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/who-mark.svg">
+  <title>WHO — Know who's calling.</title>
+  <link rel="icon" href="assets/who-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-nav">
+    <a class="brand" href="#top" aria-label="WHO home">
+      <span class="brand-mark">W</span>
+      <span>WHO</span>
+      <span class="brand-beta">BETA 1.0</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#platforms">Platforms</a>
+      <a href="admin/">Admin</a>
+    </nav>
+    <a class="nav-cta" href="#downloads">Get WHO <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> PRIVATE BETA · BUILT BY SQUASHBERRY</div>
+        <h1>Know who’s calling.<br><em>Stay in control.</em></h1>
+        <p class="hero-lead">WHO is a new communication layer for your phone — combining caller intelligence, a modern dialer, SMS, contacts and smart protections in one focused experience.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#downloads">Explore downloads <span>→</span></a>
+          <a class="button button-ghost" href="#preview">See the interface <span>↘</span></a>
+        </div>
+        <div class="hero-meta">
+          <span>Caller ID</span><span>Default Phone</span><span>SMS</span><span>Relay</span><span>VPN</span>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+        <div class="floating-chip chip-top"><span class="tiny-icon">✦</span> communication, rethought</div>
+        <div class="phone-stack">
+          <div class="phone phone-back">
+            <div class="phone-notch"></div>
+            <div class="screen-back">
+              <div class="mini-topbar"><span>9:41</span><span>●●●</span></div>
+              <div class="mini-avatar">R</div>
+              <div class="mini-name">Reine</div>
+              <div class="mini-sub">Mobile · The Gambia</div>
+              <div class="mini-actions"><i>☎</i><i>✉</i><i>⋯</i></div>
+            </div>
+          </div>
+          <div class="phone phone-front">
+            <div class="phone-notch"></div>
+            <div class="screen-front">
+              <div class="mini-topbar"><span>9:41</span><span>▴</span></div>
+              <div class="who-home-mark">W</div>
+              <div class="screen-title">Who is calling?</div>
+              <div class="search-pill"><span>⌕</span><span>Search contacts or number</span></div>
+              <div class="dialpad">
+                <b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b>
+              </div>
+              <div class="call-orb">☎</div>
+              <div class="bottom-tab"><span class="active">Dial</span><span>Calls</span><span>Contacts</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card caller-card">
+          <div class="card-kicker">INCOMING CALL</div>
+          <div class="caller-row"><div class="caller-avatar">J</div><div><strong>John Doe</strong><span>Mobile · +220 3xx xxx</span></div><div class="verified">✓</div></div>
+          <div class="confidence"><span>community confidence</span><strong>82%</strong></div>
+        </div>
+        <div class="floating-card status-card"><span class="status-live"></span><div><b>Relay</b><span>Secure tunnel ready</span></div></div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track"><span>CALLER ID</span><i>✦</i><span>DIALER</span><i>✦</i><span>SMS</span><i>✦</i><span>CONTACTS</span><i>✦</i><span>RELAY</span><i>✦</i><span>PRIVACY</span><i>✦</i><span>CALLER ID</span><i>✦</i><span>DIALER</span><i>✦</i></div>
+    </section>
+
+    <section id="features" class="section section-dark">
+      <div class="section-head">
+        <div><div class="eyebrow">WHAT WHO IS BUILDING</div><h2>A phone experience that<br><em>gets out of your way.</em></h2></div>
+        <p>Built around the parts of communication you actually touch every day — calls, messages, contacts and the moments you need context before you answer.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-large">
+          <div class="feature-icon">◉</div><div class="feature-status live">BETA</div>
+          <h3>Caller intelligence</h3>
+          <p>See useful context when a number reaches you. WHO is designed to grow a community-assisted identity layer while keeping contribution opt-in.</p>
+          <div class="visual-line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div><div class="feature-status live">BETA</div>
+          <h3>Default phone</h3><p>A clean dialer with a focused call flow, ready to become the phone layer instead of sitting beside it.</p><div class="feature-tag">Native Android role</div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">▤</div><div class="feature-status live">BETA</div>
+          <h3>SMS that feels native</h3><p>Keep conversations, threads and compose actions close to the same place you make calls.</p><div class="feature-tag">Default SMS ready</div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div><div class="feature-status next">NEXT</div>
+          <h3>Shared name intelligence</h3><p>With permission, WHO can compare contributed contact names and surface the strongest candidate for an unknown number.</p><div class="feature-tag">Opt-in only</div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">↟</div><div class="feature-status next">NEXT</div>
+          <h3>Google Drive backups</h3><p>Back up contacts and app data to your own Google Drive account, then restore it on a new device.</p><div class="feature-tag">Private backup path</div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌘</div><div class="feature-status live">BETA</div>
+          <h3>Relay + VPN</h3><p>The communication stack is being built around a native relay/tunnel engine so networking stays a first-class part of the product.</p><div class="feature-tag">Native engine</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="preview" class="section preview-section">
+      <div class="section-head">
+        <div><div class="eyebrow">PRODUCT PREVIEW</div><h2>Designed like a phone app.<br><em>Not a control panel.</em></h2></div>
+        <p>These are polished product previews of the current WHO direction. The exact store screenshots can replace them as the beta screens settle.</p>
+      </div>
+      <div class="gallery">
+        <div class="gallery-card tall">
+          <div class="shot-label">01 · DIALER</div>
+          <div class="mock-screen dark-screen">
+            <div class="mock-header"><span>WHO</span><span>⌁</span></div>
+            <div class="mock-greeting">Good evening</div>
+            <div class="mock-number">+220 3XX XXX</div>
+            <div class="mock-keypad"><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b><b>*</b><b>0</b><b>#</b></div>
+            <div class="mock-call">☎</div>
+          </div>
+        </div>
+        <div class="gallery-card wide">
+          <div class="shot-label">02 · CALLER ID</div>
+          <div class="mock-screen blue-screen">
+            <div class="incoming-kicker">INCOMING CALL</div>
+            <div class="big-avatar">A</div>
+            <div class="big-name">Amadou Bah</div>
+            <div class="big-location">Banjul · Mobile</div>
+            <div class="identity-meter"><span style="width:86%"></span></div>
+            <div class="identity-copy"><span>WHO confidence</span><strong>86%</strong></div>
+            <div class="big-actions"><i>Decline</i><i class="answer">Answer</i></div>
+          </div>
+        </div>
+        <div class="gallery-card tall">
+          <div class="shot-label">03 · SMS</div>
+          <div class="mock-screen light-screen">
+            <div class="mock-header light"><span>Messages</span><span>＋</span></div>
+            <div class="thread"><b>Meenat</b><span>Seen recently</span><p>Hey, you reached home?</p></div>
+            <div class="thread active-thread"><b>John</b><span>2m ago</span><p>Calling you in a minute.</p></div>
+            <div class="thread"><b>Unknown</b><span>Spam check pending</span><p>+220 7XX XXX</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms" class="section platform-section">
+      <div class="platform-hero">
+        <div class="eyebrow">ONE WHO · MANY SCREENS</div>
+        <h2>Start on Android.<br><em>Grow everywhere.</em></h2>
+        <p>WHO is being designed as a cross-platform brand and service. Android is the active beta target; the other surfaces are already part of the roadmap.</p>
+      </div>
+      <div class="platform-grid" id="downloads">
+        <a class="platform-card android" href="#beta-download" onclick="showToast('Android download link will be connected here.')">
+          <div class="platform-logo play-logo"><span>▶</span></div><div><b>Google Play</b><small>Android · Beta</small></div><span class="platform-arrow">↗</span>
+        </a>
+        <div class="platform-card soon"><div class="platform-logo apple">●</div><div><b>iPhone</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
+        <div class="platform-card soon"><div class="platform-logo apple">▣</div><div><b>iPad</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
+        <div class="platform-card soon"><div class="platform-logo mac">◌</div><div><b>Mac</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
+        <div class="platform-card soon"><div class="platform-logo windows">⊞</div><div><b>Windows</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
+      </div>
+    </section>
+
+    <section class="section intelligence-section">
+      <div class="intelligence-visual">
+        <div class="network-grid"></div>
+        <div class="node node-main">WHO</div>
+        <div class="node node-a">A</div><div class="node node-b">M</div><div class="node node-c">J</div><div class="node node-d">R</div><div class="node node-e">S</div>
+        <span class="connection c1"></span><span class="connection c2"></span><span class="connection c3"></span><span class="connection c4"></span><span class="connection c5"></span>
+      </div>
+      <div class="intelligence-copy">
+        <div class="eyebrow">THE NEXT UPDATE</div>
+        <h2>Names become useful when <em>people agree.</em></h2>
+        <p>The next WHO intelligence layer is planned around consented contact contributions. Multiple devices can contribute a name for the same normalized number; the service can then rank candidates instead of trusting one upload blindly.</p>
+        <div class="intelligence-points"><span>01</span><div><b>Normalize</b><small>Convert phone numbers into one consistent format.</small></div></div>
+        <div class="intelligence-points"><span>02</span><div><b>Compare</b><small>Aggregate opt-in name contributions from participating users.</small></div></div>
+        <div class="intelligence-points"><span>03</span><div><b>Confidence</b><small>Show a candidate and confidence indicator rather than pretending certainty.</small></div></div>
+      </div>
+    </section>
+
+    <section class="section privacy-section">
+      <div class="privacy-copy">
+        <div class="eyebrow">PRIVACY BY DESIGN</div>
+        <h2>Your contacts are <em>yours.</em></h2>
+        <p>WHO’s future contact-intelligence features are designed to be opt-in. Backups are intended to live under the user’s own Google account. Admin systems are separated from public product data.</p>
+        <div class="privacy-list"><div>✓ Contribution can be disabled</div><div>✓ Backup belongs to your Google account</div><div>✓ Admin secrets stay server-side</div><div>✓ Service outages should not brick the app</div></div>
+      </div>
+      <div class="privacy-card"><div class="privacy-ring"><span>W</span></div><div class="privacy-title">USER CONTROL</div><div class="privacy-copy-small">WHO should tell you what it knows — and what it still doesn’t.</div></div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="final-orb"></div>
+      <div class="eyebrow">WHO · BETA 1.0 · SQUASHBERRY</div>
+      <h2>Make every unknown<br><em>feel a little less unknown.</em></h2>
+      <p>Follow the beta as WHO grows from a phone interface into a communication intelligence layer.</p>
+      <div class="hero-actions centered"><a class="button button-primary" href="#downloads">Explore WHO <span>→</span></a><a class="button button-ghost" href="mailto:squashberrypro@gmail.com">Feedback <span>↗</span></a></div>
+      <div class="beta-note">This beta is actively evolving. Some features shown are roadmap features and are not yet available.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><div class="brand footer-brand"><span class="brand-mark">W</span><span>WHO</span></div><p>Created by Squashberry · Beta 1.0</p></div>
+    <div class="footer-links"><a href="#features">Features</a><a href="#platforms">Platforms</a><a href="admin/">Admin</a><a href="privacy.html">Privacy</a><a href="mailto:squashberrypro@gmail.com">Contact</a></div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

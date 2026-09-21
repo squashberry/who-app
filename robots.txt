@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://squashberry.github.io/who-app/sitemap.xml
