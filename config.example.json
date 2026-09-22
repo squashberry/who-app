@@ -1,0 +1,22 @@
+{
+  "appVersion": "1.0.0",
+  "latestVersion": "1.0.0",
+  "minimumVersion": "1.0.0",
+  "forceUpdate": false,
+  "updateUrl": "https://github.com/squashberry/who-app/releases/latest",
+  "forceUpdateTitle": "WHO update required",
+  "forceUpdateMessage": "You need to update this app to continue using it. WHO is still in beta and we improve it regularly. Please install the latest version to continue using WHO.",
+  "forceUpdateButton": "Update WHO",
+  "welcomeEnabled": true,
+  "welcomeRevision": 1,
+  "welcomeTitle": "WHO Beta 1.0",
+  "welcomeMessage": "This is a WHO Beta 1.0 app created by Squashberry. We really appreciate your feedback as we continue improving WHO.",
+  "welcomeEmail": "squashberrypro@gmail.com",
+  "welcomeButtonText": "Continue",
+  "maintenanceEnabled": false,
+  "maintenanceTitle": "",
+  "maintenanceMessage": "",
+  "announcementEnabled": false,
+  "announcementTitle": "",
+  "announcementMessage": ""
+}
