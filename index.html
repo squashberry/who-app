@@ -12,6 +12,69 @@
   <title>WHO — Know who's calling.</title>
   <link rel="icon" href="assets/who-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+
+<style>
+.how-section,.everyday-section,.report-section,.roadmap-section,.first-fifty-section{position:relative;overflow:hidden}
+.how-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:42px}
+.how-card{position:relative;padding:28px;border:1px solid rgba(255,255,255,.08);border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));min-height:260px}
+.how-index{position:absolute;top:18px;right:20px;font-size:10px;font-weight:800;letter-spacing:.12em;color:#58718e}
+.how-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#0e1827;color:#70ccff;font-size:20px;border:1px solid rgba(100,200,255,.14);margin-bottom:38px}
+.how-card h3{margin:0 0 10px;font-size:23px}
+.how-card p{margin:0;color:#9aa8be;font-size:12px;line-height:1.75}
+.how-card small{display:block;margin-top:22px;color:#5f728c;font-size:8px;letter-spacing:.12em;font-weight:800}
+.how-strip{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:16px;padding:16px 18px;border:1px solid rgba(102,200,255,.12);background:rgba(31,143,255,.045);border-radius:18px;color:#87a0bb;font-size:10px}
+.how-strip>div{display:flex;align-items:center;gap:9px;color:#dcecff}.strip-dot{width:7px;height:7px;border-radius:99px;background:#53c8ff;box-shadow:0 0 16px rgba(83,200,255,.55)}
+.everyday-section{background:#070a11}
+.everyday-title{max-width:690px}
+.everyday-title h2{margin:13px 0 14px;font-size:56px;line-height:.98;letter-spacing:-.045em}
+.everyday-title h2 em,.roadmap-section h2 em,.report-copy h2 em,.first-fifty-copy h2 em{font-style:normal;color:#72caff}
+.everyday-title p{margin:0;color:#95a2b7;font-size:14px;line-height:1.75}
+.everyday-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:42px}
+.everyday-card{position:relative;padding:30px;border-radius:28px;border:1px solid rgba(255,255,255,.08);background:#0a0f18;overflow:hidden;min-height:250px}
+.everyday-card::after{content:"";position:absolute;inset:auto -20% -30% auto;width:180px;height:180px;border-radius:50%;filter:blur(34px);opacity:.22;background:#1f91ff}
+.everyday-card.accent-cyan::after{background:#21d9d1}.everyday-card.accent-violet::after{background:#8f72ff}
+.everyday-number{font-size:11px;color:#60738c;letter-spacing:.12em;font-weight:800}
+.everyday-icon{width:50px;height:50px;margin:34px 0 24px;border-radius:16px;background:#111a29;border:1px solid rgba(255,255,255,.06);display:grid;place-items:center;font-size:22px;color:#d9efff}
+.everyday-card h3{margin:0 0 10px;font-size:24px}
+.everyday-card p{margin:0;color:#96a3b6;font-size:12px;line-height:1.75;max-width:92%}
+.everyday-card>span{position:absolute;left:30px;bottom:25px;color:#5f7895;font-size:8px;font-weight:800;letter-spacing:.12em}
+.report-section{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:54px;align-items:center}
+.report-visual{min-height:500px;border-radius:32px;border:1px solid rgba(255,255,255,.08);background:radial-gradient(circle at 50% 30%,rgba(32,160,255,.12),transparent 45%),#080c14;display:grid;place-items:center;overflow:hidden}
+.report-window{width:min(440px,84%);padding:22px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:#0d1420;box-shadow:0 22px 80px rgba(0,0,0,.36)}
+.report-window-top{display:flex;justify-content:space-between;color:#65809c;font-size:8px;font-weight:800;letter-spacing:.11em}
+.report-person{display:flex;gap:12px;align-items:center;margin-top:30px}
+.report-avatar{width:54px;height:54px;border-radius:17px;background:#172334;display:grid;place-items:center;color:#8edcff;font-weight:900;font-size:20px}
+.report-person b{display:block;font-size:17px}.report-person small{display:block;margin-top:5px;color:#71839b;font-size:10px}
+.report-options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:24px}
+.report-options span{padding:12px 11px;border:1px solid rgba(255,255,255,.06);border-radius:14px;color:#c3d1e1;font-size:10px;text-align:center;background:#101a28}
+.report-note{margin-top:15px;padding:12px;border-radius:14px;background:#0b1018;color:#708097;font-size:9px;line-height:1.6}
+.report-window button{width:100%;margin-top:15px;border:0;border-radius:14px;padding:12px;background:#1687ff;color:#fff;font-weight:800}
+.report-copy h2{font-size:52px;line-height:.99;letter-spacing:-.045em;margin:14px 0}
+.report-copy>p{margin:0;color:#97a4b9;font-size:13px;line-height:1.8;max-width:620px}
+.report-list{display:grid;gap:13px;margin-top:30px}
+.report-list>div{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:14px 0;border-top:1px solid rgba(255,255,255,.07)}
+.report-list span{width:28px;height:28px;border-radius:10px;background:#101a29;display:grid;place-items:center;color:#70cfff;font-size:9px;font-weight:800}
+.report-list b{display:block;font-size:12px}.report-list small{display:block;margin-top:4px;color:#6f8098;line-height:1.6;font-size:9px}
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:42px}
+.roadmap-card{padding:27px;border-radius:26px;border:1px solid rgba(255,255,255,.08);background:#090e17}
+.roadmap-card>div{display:flex;align-items:center;gap:8px;color:#667c96;font-size:8px;font-weight:800;letter-spacing:.12em}
+.roadmap-dot{width:7px;height:7px;border-radius:50%;background:#53c8ff;box-shadow:0 0 16px rgba(83,200,255,.4)}
+.next-roadmap .roadmap-dot{background:#8ce6bb}.future-roadmap .roadmap-dot{background:#a792ff}
+.roadmap-card h3{margin:18px 0 9px;font-size:24px}.roadmap-card p{margin:0;color:#929fb4;font-size:11px;line-height:1.75}
+.roadmap-card ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px}.roadmap-card li{color:#d4dfec;font-size:10px}.roadmap-card li::before{content:"✓";color:#72caff;margin-right:8px}
+.first-fifty-card{display:grid;grid-template-columns:auto 1fr;gap:38px;align-items:center;padding:36px;border-radius:32px;border:1px solid rgba(91,195,255,.14);background:linear-gradient(135deg,rgba(22,135,255,.1),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+.fifty-mark{width:150px;height:150px;border-radius:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#55c9ff,#1687ff 58%,#084caf);color:#fff;box-shadow:0 25px 80px rgba(22,135,255,.24)}
+.fifty-mark strong{font-size:58px;line-height:.8;letter-spacing:-.07em}.fifty-mark span{margin-top:12px;font-size:8px;letter-spacing:.14em;font-weight:900}
+.first-fifty-copy h2{font-size:42px;line-height:1.02;letter-spacing:-.04em;margin:10px 0}.first-fifty-copy p{margin:0;color:#96a3b8;font-size:12px;line-height:1.8;max-width:720px}.fifty-actions{display:flex;gap:10px;margin-top:20px}
+@media(max-width:920px){.how-grid,.roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.everyday-grid{grid-template-columns:1fr}.report-section{grid-template-columns:1fr}.first-fifty-card{grid-template-columns:1fr}.fifty-mark{width:118px;height:118px}.fifty-mark strong{font-size:48px}}
+@media(max-width:620px){
+  .how-grid,.roadmap-grid{grid-template-columns:1fr}.how-card{min-height:auto}.how-strip{display:grid;gap:8px}
+  .everyday-title h2,.report-copy h2{font-size:40px}.everyday-card{min-height:230px}
+  .report-visual{min-height:420px}.report-window{width:calc(100% - 36px)}
+  .first-fifty-card{padding:22px;border-radius:24px;gap:20px}.first-fifty-copy h2{font-size:31px}.fifty-actions{display:grid}
+  .fifty-actions .button{width:100%}
+}
+</style>
 </head>
 <body>
   <div class="noise"></div>
@@ -25,6 +88,7 @@
     </a>
     <nav class="nav-links">
       <a href="#features">Features</a>
+      <a href="#how">How it works</a>
       <a href="#preview">Preview</a>
       <a href="#platforms">Platforms</a>
       <a href="admin/">Admin</a>
@@ -172,8 +236,8 @@
         <p>WHO is being designed as a cross-platform brand and service. Android is the active beta target; the other surfaces are already part of the roadmap.</p>
       </div>
       <div class="platform-grid" id="downloads">
-        <a class="platform-card android" href="#beta-download" onclick="showToast('Android download link will be connected here.')">
-          <div class="platform-logo play-logo"><span>▶</span></div><div><b>Google Play</b><small>Android · Beta</small></div><span class="platform-arrow">↗</span>
+        <a class="platform-card android" href="https://github.com/squashberry/who-app/releases/latest/download/WHO-v1.0.0.apk">
+          <div class="platform-logo play-logo"><span>↓</span></div><div><b>Android APK</b><small>Beta 1.0 · direct download</small></div><span class="platform-arrow">↗</span>
         </a>
         <div class="platform-card soon"><div class="platform-logo apple">●</div><div><b>iPhone</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
         <div class="platform-card soon"><div class="platform-logo apple">▣</div><div><b>iPad</b><small>Coming soon</small></div><span class="soon-pill">SOON</span></div>
@@ -209,6 +273,148 @@
       <div class="privacy-card"><div class="privacy-ring"><span>W</span></div><div class="privacy-title">USER CONTROL</div><div class="privacy-copy-small">WHO should tell you what it knows — and what it still doesn’t.</div></div>
     </section>
 
+
+    <section id="how" class="section how-section">
+      <div class="section-head">
+        <div><div class="eyebrow">HOW WHO THINKS</div><h2>From an unknown number<br><em>to useful context.</em></h2></div>
+        <p>WHO is not trying to guess everything instantly. The product is being built around a simple chain: collect permitted signals, normalize them, compare them, explain the result and let the user decide what to do.</p>
+      </div>
+
+      <div class="how-grid">
+        <article class="how-card">
+          <span class="how-index">01</span>
+          <div class="how-icon">⌕</div>
+          <h3>Detect</h3>
+          <p>When a call arrives, WHO can work with the phone number, the local contacts database and available caller signals.</p>
+          <small>INPUT · CALL + CONTACTS</small>
+        </article>
+        <article class="how-card">
+          <span class="how-index">02</span>
+          <div class="how-icon">◉</div>
+          <h3>Recognize</h3>
+          <p>Known contact information can be combined with anonymized caller observations and other community signals.</p>
+          <small>COMPARE · MULTIPLE SIGNALS</small>
+        </article>
+        <article class="how-card">
+          <span class="how-index">03</span>
+          <div class="how-icon">✓</div>
+          <h3>Explain</h3>
+          <p>WHO is designed to show the confidence and source of a useful caller signal instead of pretending every match is certain.</p>
+          <small>OUTPUT · CONTEXT + CONFIDENCE</small>
+        </article>
+        <article class="how-card">
+          <span class="how-index">04</span>
+          <div class="how-icon">↗</div>
+          <h3>Act</h3>
+          <p>Answer, ignore, block or report. The caller screen stays focused on what you need in the moment.</p>
+          <small>ACTION · YOUR DECISION</small>
+        </article>
+      </div>
+
+      <div class="how-strip">
+        <div><span class="strip-dot"></span><b>WHO is built to assist, not decide for you.</b></div>
+        <span>Unknown · matched · reported · blocked · answered</span>
+      </div>
+    </section>
+
+    <section class="section everyday-section">
+      <div class="everyday-title">
+        <div class="eyebrow">IN THE REAL WORLD</div>
+        <h2>Useful in the little moments<br><em>that happen all day.</em></h2>
+        <p>The goal is not another giant dashboard. It is a phone experience that quietly gives you more context when context matters.</p>
+      </div>
+
+      <div class="everyday-grid">
+        <article class="everyday-card accent-blue">
+          <div class="everyday-number">07:42</div>
+          <div class="everyday-icon">☎</div>
+          <h3>Morning call</h3>
+          <p>A saved contact appears normally. An unfamiliar business number gets the available WHO context before you answer.</p>
+          <span>CALLER INTELLIGENCE</span>
+        </article>
+        <article class="everyday-card accent-cyan">
+          <div class="everyday-number">12:18</div>
+          <div class="everyday-icon">⌁</div>
+          <h3>On the move</h3>
+          <p>Open the network layer, check your connection state and use WHO's VPN/Relay tools when the situation calls for them.</p>
+          <span>NETWORK + RELAY</span>
+        </article>
+        <article class="everyday-card accent-violet">
+          <div class="everyday-number">19:03</div>
+          <div class="everyday-icon">▤</div>
+          <h3>Message back</h3>
+          <p>Keep the conversation in the same product instead of jumping through separate dialer, contacts and messaging apps.</p>
+          <span>SMS + CONTACTS</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section report-section">
+      <div class="report-visual">
+        <div class="report-window">
+          <div class="report-window-top"><span>WHO · CALLER</span><span>REPORT</span></div>
+          <div class="report-person">
+            <div class="report-avatar">?</div>
+            <div><b>Unknown number</b><small>Caller intelligence available</small></div>
+          </div>
+          <div class="report-options">
+            <span>Spam</span><span>Suspicious</span><span>Unwanted</span><span>Other</span>
+          </div>
+          <div class="report-note">Community reports help WHO improve caller context over time.</div>
+          <button type="button" onclick="showToast('Report flow is available inside the WHO beta.')">Report caller</button>
+        </div>
+      </div>
+      <div class="report-copy">
+        <div class="eyebrow">COMMUNITY SIGNALS</div>
+        <h2>When something looks wrong,<br><em>give WHO a signal.</em></h2>
+        <p>WHO already has caller lookup, observation and reporting paths in its backend architecture. The public product is designed so that reporting can feed the caller-intelligence layer without turning one person's opinion into unquestioned truth.</p>
+        <div class="report-list">
+          <div><span>01</span><div><b>Report</b><small>Flag a number when the call feels unwanted or suspicious.</small></div></div>
+          <div><span>02</span><div><b>Aggregate</b><small>Combine multiple observations instead of trusting a single report.</small></div></div>
+          <div><span>03</span><div><b>Improve</b><small>Use stronger community evidence to improve future caller context.</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap-section">
+      <div class="section-head">
+        <div><div class="eyebrow">BETA ROADMAP</div><h2>What is here.<br><em>What comes next.</em></h2></div>
+        <p>WHO is a live beta. Some pieces are working now, others are actively being wired into the production path. The site labels roadmap items rather than pretending they are shipped.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article class="roadmap-card live-roadmap">
+          <div><span class="roadmap-dot"></span><span>ACTIVE</span></div>
+          <h3>Beta 1.0</h3>
+          <p>Caller ID foundations, phone/dialer flows, contacts, SMS, Android call roles, Relay and native network work.</p>
+          <ul><li>Android beta</li><li>Phone-first UI</li><li>Caller reporting path</li></ul>
+        </article>
+        <article class="roadmap-card next-roadmap">
+          <div><span class="roadmap-dot"></span><span>NEXT</span></div>
+          <h3>Intelligence layer</h3>
+          <p>Broader consented contact observations, stronger name comparison and more transparent reputation signals.</p>
+          <ul><li>Community confidence</li><li>Better matching</li><li>More caller context</li></ul>
+        </article>
+        <article class="roadmap-card future-roadmap">
+          <div><span class="roadmap-dot"></span><span>ROADMAP</span></div>
+          <h3>More devices</h3>
+          <p>Extend the WHO experience beyond the current Android beta while keeping the same identity, privacy and design language.</p>
+          <ul><li>iPhone / iPad</li><li>Desktop</li><li>Cross-device continuity</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section first-fifty-section">
+      <div class="first-fifty-card">
+        <div class="fifty-mark"><strong>50</strong><span>FIRST USERS</span></div>
+        <div class="fifty-copy">
+          <div class="eyebrow">WHO BETA 1.0</div>
+          <h2>We want the first 50 people to shape the product with us.</h2>
+          <p>Try WHO on a real phone. Tell us what feels good, what feels weird, what you expected to work and what should exist next. Early feedback is part of the product — not an afterthought.</p>
+          <div class="fifty-actions"><a class="button button-primary" href="mailto:squashberrypro@gmail.com">Send feedback <span>↗</span></a><a class="button button-ghost" href="#downloads">Get the beta <span>→</span></a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section final-cta">
       <div class="final-orb"></div>
       <div class="eyebrow">WHO · BETA 1.0 · SQUASHBERRY</div>
@@ -221,7 +427,7 @@
 
   <footer class="footer">
     <div><div class="brand footer-brand"><span class="brand-mark">W</span><span>WHO</span></div><p>Created by Squashberry · Beta 1.0</p></div>
-    <div class="footer-links"><a href="#features">Features</a><a href="#platforms">Platforms</a><a href="admin/">Admin</a><a href="privacy.html">Privacy</a><a href="mailto:squashberrypro@gmail.com">Contact</a></div>
+    <div class="footer-links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#platforms">Platforms</a><a href="admin/">Admin</a><a href="privacy.html">Privacy</a><a href="mailto:squashberrypro@gmail.com">Contact</a></div>
   </footer>
 
   <div class="toast" id="toast"></div>
